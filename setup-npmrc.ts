@@ -78,7 +78,7 @@ async function requestCode(): Promise<RequestCodeResult> {
     },
     body: new URLSearchParams({
       client_id: getGitHubCliClientId(),
-      scope: "read:packages",
+      scope: "repo read:org gist read:packages",
     }),
   });
   const resText = await res.text();
